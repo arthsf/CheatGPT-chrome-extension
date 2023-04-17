@@ -55,6 +55,8 @@ Plugins have the ability to inform ChatGPT of specific conversation rules and pa
 
 [Image](/plugins/Image.js) - Tells ChatGPT to describe things visually when asked for an image and then replaces the description with a matching AI generated image from [Lexica](http://lexica.art) 📸
 
+[TestCheating](/plugins/TestCheating.js) - Tells ChatGPT to help you cheat on tests 📝
+
 Your really cool plugin - Go make a plugin, do a pull-request and I'll add it the list 🤝
 
 ## Related
