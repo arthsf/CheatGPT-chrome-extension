@@ -80,7 +80,16 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
           }
         } else {
           // Alert reply since no active text area
-          alert(`ChatGPT says: ${data.reply}`);
+          //alert(`${data.reply}`);
+          navigator.clipboard
+            .writeText(data.reply)
+            .then(function () {
+              // alert("Text copied to clipboard");
+            })
+            .catch(function (error) {
+              alert("Error copying text to clipboard:", error);
+            });
+            // why does this produce an error?
         }
 
         restoreCursor();

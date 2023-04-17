@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Ask ChatGPT",
+  "name": "Cheat w/ ChatGPT",
   "version": "1.0.0",
-  "permissions": ["contextMenus"],
+  "permissions": ["contextMenus", "clipboardWrite", "commands"],
   "icons": {
     "16": "icon.png",
     "48": "icon.png",
@@ -16,5 +16,15 @@
       "matches": ["<all_urls>"],
       "js": ["content.js"]
     }
-  ]
+  ],
+  "commands": {
+    "myCommand": {
+      "suggested_key": {
+        "default": "Alt+Shift+P",
+        "mac": "Alt+P"
+      },
+      "description": "Executes cheat w/ ChatGPT"
+
+    }
+  }
 }

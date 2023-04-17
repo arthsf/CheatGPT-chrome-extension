@@ -12,3 +12,10 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
     chrome.tabs.sendMessage(tab.id, { type: "ASK_CHATGPT" });
   }
 });
+
+// Listen for commands sent from the keyboard shortcut
+chrome.commands.onCommand.addListener(function(command) { 
+  if (command === "myCommand") { 
+    chrome.tabs.sendMessage(tab.id, { type: "ASK_CHATGPT" });
+ } 
+});

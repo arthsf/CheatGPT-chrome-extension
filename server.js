@@ -4,13 +4,17 @@ import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
 import { ChatGPTAPI } from "chatgpt";
+import { ChatGPTUnofficialProxyAPI  } from "chatgpt";
+import Authenticator from "openai-authenticator";
 import { oraPromise } from "ora";
 import config from "./config.js";
 
 const app = express().use(cors()).use(bodyParser.json());
 
-const gptApi = new ChatGPTAPI({
-  apiKey: process.env.OPENAI_API_KEY
+
+const gptApi = new ChatGPTUnofficialProxyAPI({
+  accessToken: process.env.OPENAI_ACCESS_TOKEN,
+  apiReverseProxyUrl: 'https://bypass.churchless.tech/api/conversation'
 });
 
 const Config = configure(config);

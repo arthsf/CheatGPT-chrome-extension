@@ -1,6 +1,6 @@
-# ChatGPT Chrome Extension 🤖 ✨
+# CheatGPT Chrome Extension 
 
-A Chrome extension that adds [ChatGPT](https://chat.openai.com) to every text box on the internet! Use it to write tweets, revise emails, fix coding bugs, or whatever else you need, all without leaving the site you're on. Includes a plugin system for greater control over ChatGPT behavior and ability to interact with 3rd party APIs.
+This project is a fork of [chat-gpt-chrome-extension](https://github.com/gragland/chatgpt-chrome-extension)  by Gabe Ragland. It is a Chrome extension that adds [ChatGPT](https://chat.openai.com) to every text box on the internet! Use it to to get answer discretely from ChatGPT.
 
 ![](https://i.imgur.com/CPMOyG7.gif)
 
@@ -15,6 +15,15 @@ npm install
 ```
 
 Copy `.env-example` into a new file named `.env` and add your ChatGPT API Key.
+If you don't have one or you don't have tokens left, you can use the ChatGPT unofficial API by [Travis Fischer](https://github.com/transitive-bullshit/chatgpt-api). The easiest way to set it up is to get your access token, which can be found from an opened ChatGPT session with this [url](https://chat.openai.com/api/auth/session), and paste into the `OPENAI_ACCESS_TOKEN` field in `.env` and leave the `OPENAI_API_KEY` field blank.
+
+```bash
+
+```bash
+
+```bash
+
+```bash
 
 Run the server so the extension can communicate with ChatGPT.
 
@@ -32,6 +41,7 @@ Add the extension
 4. Select your local `chatgpt-chrome-extension/extension` directory
 
 You'll now see "Ask ChatGPT" if you right click in any text input or content editable area.
+The answer will be added to your clipboard and you can paste it where you want.
 
 ## Troubleshooting
 
